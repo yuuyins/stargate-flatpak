@@ -1,0 +1,35 @@
+{
+    "name": "pypi-dependencies",
+    "buildsystem": "simple",
+    "build-commands": [],
+    "modules": [
+        {
+            "name": "python3-wavefile",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"wavefile\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/a8/41/354d7f9b5f0781702dba65f46997a19532a77374343b12aed645976e852e/wavefile-1.5.tar.gz",
+                    "sha256": "23abe66c45c6dc0789d1c5b91db3b9cd27ae09e89eb748420b9988de91ae0c0b"
+                }
+            ]
+        },
+        {
+            "name": "pymarshal",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pymarshal\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/62/ef/e04a84361e82c8f0b750a63691404ed47dcfa3c7463eab16ec7607be0efc/pymarshal-2.2.0.tar.gz",
+                    "sha256": "2f2377170261be43233375c9c2726fc9b8f9daacc75eb18458d2e1c6cd8578a2"
+                }
+            ]
+        }
+    ]
+}

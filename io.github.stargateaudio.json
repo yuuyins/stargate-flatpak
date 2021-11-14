@@ -1,0 +1,35 @@
+{
+  "app-id": "io.github.stargateaudio.stargate",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "21.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "stargate",
+  "finish-args": [
+    "--share=ipc",
+    "--share=network",
+    "--socket=fallback-x11",
+    "--socket=wayland",
+    "--socket=pulseaudio",
+    "--device=dri",
+    "--filesystem=xdg-music"
+  ],
+  "modules": [
+    "pypi-dependencies.json",
+    {
+      "name": "stargate",
+      "buildsystem": "autotools",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/stargateaudio/stargate.git",
+          "tag": "release-21.11.5",
+          "commit": "e4289fd9231efb2e15cb4c072efd0a657132e535",
+          "x-checker-data": {
+            "type": "git",
+            "tag-pattern": "^release-([\\d.]+)$"
+          }
+        }
+      ]
+    }
+  ]
+}
